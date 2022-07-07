@@ -11,12 +11,12 @@ func FullLine(text string) {
 	fmt.Print(text)
 	w, _, err := terminal.GetSize(0)
 	if err != nil {
-		fmt.Println(text)
+		fmt.Println()
 		return
 	}
 	more := w - len(text) - 1
 	if more <= 2 {
-		fmt.Println(text)
+		fmt.Println()
 		return
 	}
 	fmt.Print(" " + strings.Repeat("*", more) + "\n")
